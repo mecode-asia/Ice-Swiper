@@ -45,6 +45,7 @@ export function getBreakpoint({
   for (let i = 0; i <= breakpointSort.length - 1; i++) {
     if (width >= breakpointSort[i].screen) {
       currentBreakpoint = breakpointSort[i];
+      break;
     }
   }
   return currentBreakpoint;
