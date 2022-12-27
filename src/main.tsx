@@ -1,11 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import IceSwiper from "./Ice-swiper";
+import IceSwiper from "./ice-swiper";
 import "./index.css";
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <React.StrictMode>
-    <div style={{ width: "100vw" }}>
+    <div style={{ width: "100T" }}>
       <IceSwiper
         defaultBreakpoint={{
           contentWidth: 200,

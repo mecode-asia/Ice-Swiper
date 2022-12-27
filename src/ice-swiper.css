@@ -1,19 +1,18 @@
-.ice-swiper{
+.ice-swiper {
   display: flex;
   width: 100%;
-  background-color: gray;
   position: relative;
 }
 
-.ice-swiper-wrapper{
-  display:flex;
+.ice-swiper-wrapper {
+  display: flex;
   flex-direction: row;
   margin-left: auto;
   margin-right: auto;
   overflow-x: auto;
 }
 
-.ice-swiper-navigator{
+.ice-swiper-navigator {
   position: absolute;
   display: flex;
   flex-direction: row;
@@ -22,7 +21,8 @@
   justify-content: space-between;
 }
 
-.ice-swiper-navigator-left, .ice-swiper-navigator-right{
+.ice-swiper-navigator-left,
+.ice-swiper-navigator-right {
   width: fit-content;
   height: fit-content;
   background-color: transparent;
@@ -30,25 +30,34 @@
   box-shadow: none;
   margin-top: auto;
   margin-bottom: auto;
-  
+  border-radius: 100%;
 }
 
-.gg{
-  background-color: blue;
+.ice-swiper-navigator-btn {
+  min-width: 36px;
+  min-height: 36px;
+  background: rgb(28, 78, 214);
+  border-radius: 100%;
+  cursor: pointer;
+  display: flex;
+  transition-property: opacity;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
 }
 
-.gg:hover{
-  
-  opacity: 0.5;
+.ice-swiper-navigator-btn:hover {
+  opacity: 0.7;
+}
+
+.ice-swiper-navigator-btn:enabled:disabled {
+  background: gray;
 }
 
 .hide-scrollbar {
   -ms-overflow-style: none;
   scrollbar-width: none;
-  
 }
 
 .hide-scrollbar::-webkit-scrollbar {
   display: none;
 }
-

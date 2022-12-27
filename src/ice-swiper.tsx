@@ -1,4 +1,4 @@
-import React, { ReactElement, useRef, useState } from "react";
+import React, { ReactElement, useEffect, useRef, useState } from "react";
 import "./ice-swiper.css";
 import { getBreakpoint, useDeviceSize } from "./utils";
 import { BreakPointInterface, DefaultBreakpointInterface } from "./types";
@@ -20,6 +20,27 @@ function IceSwiper({
 
   const listRefItemScroll: React.MutableRefObject<any>[] = [];
 
+  function canDisable(
+    contentSize: number,
+    currentIndexImage: number,
+    maxSize: number,
+    forward: boolean
+  ) {
+    if (forward) {
+      if (currentIndexImage + contentSize > maxSize) {
+        return true;
+      } else {
+        return false;
+      }
+    } else {
+      if (currentIndexImage - contentSize < 0) {
+        return true;
+      } else {
+        return false;
+      }
+    }
+  }
+
   const [width] = useDeviceSize();
 
   const { slidePerview, spaceBetween, contentWidth, contentHeight } =
@@ -28,6 +49,14 @@ function IceSwiper({
       breakpoints,
       width,
     });
+
+  useEffect(() => {
+    listRefItemScroll[currentActive].current.scrollIntoView({
+      behavior: "smooth",
+      block: "nearest",
+      inline: "start",
+    });
+  }, [width]);
 
   const widthWrapperSize =
     (slidePerview - 1) * (spaceBetween ?? 0) + slidePerview * contentWidth;
@@ -52,6 +81,7 @@ function IceSwiper({
     listRefItemScroll[slideTo].current.scrollIntoView({
       behavior: "smooth",
       block: "nearest",
+      inline: "start",
     });
     setCurrentActive(slideTo);
   }
@@ -87,23 +117,42 @@ function IceSwiper({
       {navigator && (
         <div className="ice-swiper-navigator">
           <div
+            aria-disabled={canDisable(
+              slidePerview,
+              currentActive,
+              children.length,
+              false
+            )}
             className="ice-swiper-navigator-left"
             onClick={() => navigateItem(false)}
           >
-            <div
-              className="gg"
-              style={{
-                minWidth: 30,
-                minHeight: 30,
-                background: "red",
-              }}
-            />
+            <div className="ice-swiper-navigator-btn">
+              <img
+                width={10}
+                height={12}
+                style={{ margin: "auto" }}
+                src="/arrow-left.svg"
+              />
+            </div>
           </div>
           <div
+            aria-disabled={canDisable(
+              slidePerview,
+              currentActive,
+              children.length,
+              true
+            )}
             className="ice-swiper-navigator-right"
             onClick={() => navigateItem(true)}
           >
-            <div style={{ minWidth: 30, minHeight: 30, background: "red" }} />
+            <div className="ice-swiper-navigator-btn">
+              <img
+                width={10}
+                height={12}
+                style={{ margin: "auto" }}
+                src="/arrow-right.svg"
+              />
+            </div>
           </div>
         </div>
       )}
