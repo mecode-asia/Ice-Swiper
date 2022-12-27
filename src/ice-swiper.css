@@ -1,0 +1,53 @@
+.ice-swiper{
+  display: flex;
+  width: 100%;
+  background-color: gray;
+  position: relative;
+}
+
+.ice-swiper-wrapper{
+  display:flex;
+  flex-direction: row;
+  margin-left: auto;
+  margin-right: auto;
+  overflow-x: auto;
+}
+
+.ice-swiper-navigator{
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+  justify-content: space-between;
+}
+
+.ice-swiper-navigator-left, .ice-swiper-navigator-right{
+  width: fit-content;
+  height: fit-content;
+  background-color: transparent;
+  padding: 0px;
+  box-shadow: none;
+  margin-top: auto;
+  margin-bottom: auto;
+  
+}
+
+.gg{
+  background-color: blue;
+}
+
+.gg:hover{
+  opacity: 0.5;
+}
+
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
