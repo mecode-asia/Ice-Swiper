@@ -129,12 +129,6 @@ function IceSwiper({
       {navigator && (
         <div className="ice-swiper-navigator">
           <button
-            aria-disabled={canDisable(
-              slidePerview,
-              currentActive,
-              children.length,
-              false
-            )}
             className="ice-swiper-navigator-left"
             style={{ marginLeft: sidePaddingNavigator }}
             onClick={() => navigateItem(false)}
@@ -151,12 +145,6 @@ function IceSwiper({
             )}
           </button>
           <button
-            aria-disabled={canDisable(
-              slidePerview,
-              currentActive,
-              children.length,
-              true
-            )}
             style={{ marginRight: sidePaddingNavigator }}
             className="ice-swiper-navigator-right"
             onClick={() => navigateItem(true)}
