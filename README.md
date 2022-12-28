@@ -1,4 +1,7 @@
 # Ice Swiper
+<p align="center">
+ <img src="https://user-images.githubusercontent.com/64627561/209756946-34e1888f-aa47-450d-aa20-4da51708a7f9.jpeg"/>
+</p>
 
 ## Features
  - Support Customize Navigator Button
