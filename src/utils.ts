@@ -34,6 +34,8 @@ export function getBreakpoint({
     spaceBetween: defaultBreakpoint.spaceBetween,
     contentWidth: defaultBreakpoint.contentWidth,
     contentHeight: defaultBreakpoint.contentHeight,
+    sidePaddingNavigator: defaultBreakpoint.sidePaddingNavigator,
+    navigator: defaultBreakpoint.navigator,
   };
   let breakpointSort: BreakPointInterface[] = [];
   if (breakpoints) {

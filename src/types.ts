@@ -4,6 +4,8 @@ export interface BreakPointInterface {
   contentHeight: number;
   spaceBetween?: number;
   slidePerview: number;
+  sidePaddingNavigator?: number;
+  navigator: boolean;
 }
 
 export interface DefaultBreakpointInterface {
@@ -11,4 +13,6 @@ export interface DefaultBreakpointInterface {
   contentHeight: number;
   spaceBetween?: number;
   slidePerview: number;
+  sidePaddingNavigator?: number;
+  navigator: boolean;
 }

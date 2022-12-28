@@ -31,6 +31,8 @@
   margin-top: auto;
   margin-bottom: auto;
   border-radius: 100%;
+  text-decoration: none;
+  border: none;
 }
 
 .ice-swiper-navigator-btn {
@@ -47,10 +49,6 @@
 
 .ice-swiper-navigator-btn:hover {
   opacity: 0.7;
-}
-
-.ice-swiper-navigator-btn:enabled:disabled {
-  background: gray;
 }
 
 .hide-scrollbar {

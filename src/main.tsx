@@ -7,11 +7,35 @@ ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <React.StrictMode>
     <div style={{ width: "100T" }}>
       <IceSwiper
-        defaultBreakpoint={{
+        navigatorButton={{
+          backward: (
+            <div
+              style={{
+                width: 40,
+                height: 40,
+                background: "red",
+                borderRadius: "100%",
+              }}
+            ></div>
+          ),
+          forward: (
+            <div
+              style={{
+                width: 40,
+                height: 40,
+                background: "red",
+                borderRadius: "100%",
+              }}
+            ></div>
+          ),
+        }}
+        minimumBreakpoint={{
           contentWidth: 200,
           contentHeight: 200,
           slidePerview: 1,
           spaceBetween: 0,
+          navigator: false,
+          sidePaddingNavigator: 0,
         }}
         breakpoints={[
           {
@@ -20,6 +44,8 @@ ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
             contentHeight: 300,
             slidePerview: 3,
             spaceBetween: 20,
+            navigator: true,
+            sidePaddingNavigator: 100,
           },
           {
             screen: 738,
@@ -27,10 +53,14 @@ ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
             contentHeight: 240,
             slidePerview: 2,
             spaceBetween: 20,
+            navigator: true,
+            sidePaddingNavigator: 100,
           },
         ]}
       >
-        <div style={{ background: "red", height: "100%" }}>asdasd</div>
+        <div style={{ background: "red", height: "100%", display: "flex" }}>
+          <p style={{ margin: "auto" }}>asdasdasdasd</p>
+        </div>
         <div style={{ background: "green", height: "100%" }}>asdasd</div>
         <div style={{ background: "purple", height: "100%" }}>asdasd</div>
         <div style={{ background: "blue", height: "100%" }}>asdasd</div>
