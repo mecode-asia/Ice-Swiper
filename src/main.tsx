@@ -7,34 +7,12 @@ ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <React.StrictMode>
     <div style={{ width: "100T" }}>
       <IceSwiper
-        navigatorButton={{
-          backward: (
-            <div
-              style={{
-                width: 40,
-                height: 40,
-                background: "red",
-                borderRadius: "100%",
-              }}
-            ></div>
-          ),
-          forward: (
-            <div
-              style={{
-                width: 40,
-                height: 40,
-                background: "red",
-                borderRadius: "100%",
-              }}
-            ></div>
-          ),
-        }}
         minimumBreakpoint={{
           contentWidth: 200,
           contentHeight: 200,
           slidePerview: 1,
           spaceBetween: 0,
-          navigator: false,
+          navigator: true,
           sidePaddingNavigator: 0,
         }}
         breakpoints={[
