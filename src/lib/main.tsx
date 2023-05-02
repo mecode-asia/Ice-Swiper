@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import IceSwiper from "./ice-swiper";
 import "./index.css";
+import { IceSwiper } from "./ice-swiper";
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <React.StrictMode>

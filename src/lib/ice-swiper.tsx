@@ -16,7 +16,7 @@ interface Props {
   };
 }
 
-function IceSwiper({
+export function IceSwiper({
   children,
   minimumBreakpoint: defaultBreakpoint,
   breakpoints,
@@ -165,5 +165,3 @@ function IceSwiper({
     </div>
   );
 }
-
-export default IceSwiper;

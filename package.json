@@ -3,6 +3,14 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "main": "./dist/ice-swiper.umd.js",
+  "module": "./dist/ice-swiper.es.js",
+  "exports": {
+    ".": {
+      "import": "./dist/main.es.js",
+      "require": "./dist/main.cjs.js"
+    }
+  },
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
@@ -22,6 +30,7 @@
     "@typescript-eslint/eslint-plugin": "^5.47.1",
     "@typescript-eslint/parser": "^5.47.1",
     "@vitejs/plugin-react": "^3.0.0",
+    "path": "^0.12.7",
     "eslint": "^8.30.0",
     "eslint-plugin-react": "^7.31.11",
     "eslint-plugin-react-hooks": "^4.6.0",
