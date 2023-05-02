@@ -1,63 +1,62 @@
 # Ice Swiper
+
 <p align="center">
  <img src="https://user-images.githubusercontent.com/64627561/209756946-34e1888f-aa47-450d-aa20-4da51708a7f9.jpeg"/>
 </p>
 
 ## Features
- - Support Customize Navigator Button
- - Responsive friendly Breakpoint Support
 
-## Development Build
- * ยังบ่อได้ทำ รอ pair กับพี่ Tino
+- Support Customize Navigator Button
+- Responsive friendly Breakpoint Support
 
 ## Example
+
 ตัวอย่างการใช้งานเบื้องต้น
+
 ```ts
 <IceSwiper
-    minimumBreakpoint={{
-       contentWidth: 200,
-       contentHeight: 200,
-       slidePerview: 1,
-       spaceBetween: 0,
-       navigator: false,
-       sidePaddingNavigator: 0,
-     }}
-     breakpoints={[
-       {
-         screen: 1024,
-         contentWidth: 300,
-         contentHeight: 300,
-         slidePerview: 3,
-         spaceBetween: 20,
-         navigator: true,
-         sidePaddingNavigator: 100,
-       },
-       {
-         screen: 738,
-         contentWidth: 240,
-         contentHeight: 240,
-         slidePerview: 2,
-         spaceBetween: 20,
-         navigator: true,
-         sidePaddingNavigator: 100,
-       },
-     ]}
-   >
-     <div style={{ background: "red", height: "100%", display: "flex" }}>
-       <p style={{ margin: "auto" }}>asdasdasdasd</p>
-     </div>
-     <div style={{ background: "green", height: "100%" }}>Item1</div>
-     <div style={{ background: "purple", height: "100%" }}>Item2</div>
-     <div style={{ background: "blue", height: "100%" }}>Item3</div>
-     <div style={{ background: "pink", height: "100%" }}>Item4</div>
- </IceSwiper>
-
+  minimumBreakpoint={{
+    contentWidth: 200,
+    contentHeight: 200,
+    slidePerview: 1,
+    spaceBetween: 0,
+    navigator: false,
+    sidePaddingNavigator: 0,
+  }}
+  breakpoints={[
+    {
+      screen: 1024,
+      contentWidth: 300,
+      contentHeight: 300,
+      slidePerview: 3,
+      spaceBetween: 20,
+      navigator: true,
+      sidePaddingNavigator: 100,
+    },
+    {
+      screen: 738,
+      contentWidth: 240,
+      contentHeight: 240,
+      slidePerview: 2,
+      spaceBetween: 20,
+      navigator: true,
+      sidePaddingNavigator: 100,
+    },
+  ]}
+>
+  <div style={{ background: "red", height: "100%", display: "flex" }}>
+    <p style={{ margin: "auto" }}>asdasdasdasd</p>
+  </div>
+  <div style={{ background: "green", height: "100%" }}>Item1</div>
+  <div style={{ background: "purple", height: "100%" }}>Item2</div>
+  <div style={{ background: "blue", height: "100%" }}>Item3</div>
+  <div style={{ background: "pink", height: "100%" }}>Item4</div>
+</IceSwiper>
 ```
 
 <img width="1396" alt="Screen Shot 2565-12-28 at 10 54 24" src="https://user-images.githubusercontent.com/64627561/209754765-a4cf0a5d-b9eb-4d06-9c12-83126f096407.png">
 
-
-----------
+---
 
 ## Breakpoint
 
@@ -100,29 +99,29 @@
 ```
 
 # Brakpoint Minimum
+
 <img width="321" alt="Screen Shot 2565-12-28 at 11 31 52" src="https://user-images.githubusercontent.com/64627561/209757684-64616562-fdaf-49ff-88af-bb061147f7d9.png">
 
 # Breakpoint 1024
+
 <img width="1398" alt="Screen Shot 2565-12-28 at 11 31 07" src="https://user-images.githubusercontent.com/64627561/209757616-0673fbfe-765c-4b32-ade5-08de6f0b4b3a.png">
 
 # Breakpoint 738
+
 <img width="904" alt="Screen Shot 2565-12-28 at 11 29 52" src="https://user-images.githubusercontent.com/64627561/209757546-748d7431-e93d-4121-8104-d09fa98bb974.png">
 
 # Breakpoint 1024
 
-
 Attributes Breakpoints
-| Attribute   | Type                                       | Description                                                                                             |
+| Attribute | Type | Description |
 | -------- | --------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| screen  | number                                        | ขนาดของหน้าจอ (ไม่มีใน Attribute MinimumBreakpoint เพราะไม่ได้ต้องกำหนดขนาดหน้าจอ)                                                                               |
-| contentWidth    | number                           | ขนาดของ Width (Pixel) ของ Content                                                                                            |
-| contentHeight | number                    | ขนาดของ Height (Pixel) ของ Content                                                                                      |
-| slidePerview   |  number                 | จำนวน Content ที่ต้องการแสดง ต่อ 1 Slide                                                                                   |
-| spaceBetween (optional) | number                     | ระยะห่างระหว่าง Content (Pixel)                                                                                            |
-| sidePaddingNavigator (optional) | number                       | ระยะ Padding ซ้ายขวาของ Navigator Button (Pixel)  |
-| navigator     | boolean                  | แสดง Navigator Button     |
-
-
+| screen | number | ขนาดของหน้าจอ (ไม่มีใน Attribute MinimumBreakpoint เพราะไม่ได้ต้องกำหนดขนาดหน้าจอ) |
+| contentWidth | number | ขนาดของ Width (Pixel) ของ Content |
+| contentHeight | number | ขนาดของ Height (Pixel) ของ Content |
+| slidePerview | number | จำนวน Content ที่ต้องการแสดง ต่อ 1 Slide |
+| spaceBetween (optional) | number | ระยะห่างระหว่าง Content (Pixel) |
+| sidePaddingNavigator (optional) | number | ระยะ Padding ซ้ายขวาของ Navigator Button (Pixel) |
+| navigator | boolean | แสดง Navigator Button |
 
 ## Custom Navigator Button
 
