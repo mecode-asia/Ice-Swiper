@@ -1,6 +1,6 @@
 {
   "name": "ice-swiper",
-  "private": true,
+  "private": false,
   "version": "1.0.1",
   "type": "module",
   "main": "./dist/ice-swiper.umd.js",
